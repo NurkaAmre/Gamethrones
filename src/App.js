@@ -1,19 +1,34 @@
-import { StrictMode } from 'react';
-import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
-import store from './redux/configureStore';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import Characters from './pages/Characters';
+import CharacterDetails from './pages/CharacterDetails';
+import NavBar from './components/NavBar';
+import './App.module.css';
+import Footer from './components/Footer';
+import fetchCharacters from './redux/Dragons/fetch';
+import About from './pages/About';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <StrictMode>
-    <Provider store={store}>
-      <Router>
-        <App />
-      </Router>
-    </Provider>
-  </StrictMode>,
-);
+const App = () => {
+  const dispatch = useDispatch();
+  dispatch(fetchCharacters());
+  return (
+    <>
+      <NavBar />
+      <Routes>
+        <Route
+          path="/"
+          element={(
+            <Characters />
+        )}
+        />
+        <Route path="/character/:characterdetails" element={<CharacterDetails />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+      <Footer />
+    </>
+
+  );
+};
 
 export default App;
