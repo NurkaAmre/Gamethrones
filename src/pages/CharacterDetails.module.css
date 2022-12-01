@@ -1,0 +1,73 @@
+html {
+    font-size: 62.5%;
+  }
+  
+  .infoContainer {
+    display: flex;
+    gap: 5%;
+    min-height: 90vh;
+    width: 55%;
+    margin: auto;
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(19, 28, 39, 0.8);
+  }
+  
+  .image-section {
+    flex: 2 1 40rem;
+  }
+  
+  .info-section {
+    flex: 1 1 40rem;
+  }
+  
+  .img {
+    border: 1px solid black;
+    align-items: center;
+  }
+  
+  .infoList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .infoList li {
+    display: flex;
+  }
+  
+  .infoList li p,
+  .infoList li span {
+    margin: 0 10px;
+    font-size: 20px;
+    color: rgb(208, 222, 232);
+  }
+  
+  .infoList li p {
+    font-weight: bold;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .infoList {
+      width: 100vw;
+    }
+  
+    .img {
+      height: 300px;
+      width: auto;
+    }
+  
+    .infoList li {
+      width: 100vw;
+      min-width: 115px;
+      margin: 0;
+    }
+  
+    .infoList li p,
+    .infoList li span {
+      font-size: 1rem;
+      padding-left: 25%;
+    }
+  }

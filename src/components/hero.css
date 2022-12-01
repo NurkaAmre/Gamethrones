@@ -1,0 +1,30 @@
+.hero {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .heroTitle {
+    color: #4c6371;
+    font-size: 3rem;
+    padding: 0;
+  }
+  
+  .para {
+    color: #4c6371;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .heroTitle {
+      font-size: 2rem;
+    }
+  
+    .para {
+      padding-left: 5%;
+      font-size: 1rem;
+    }
+  }
