@@ -58,7 +58,7 @@
 
 - [Live Demo Link](https://game-of-thrones-iota.vercel.app/)
 
-- [Explanation video](https://www.loom.com/share/eb88e6c6d40b4b30924bbb09da276d0c)
+- [Explanation video](https://www.loom.com/share/fdedf57adb1146288b49dd592bd439d8)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
