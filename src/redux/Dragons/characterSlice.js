@@ -9,8 +9,9 @@ const charSlice = createSlice({
     status: 'idle',
   },
 
-  extraReducers: {
-    [fetchCharacters.fulfilled]: (state, action) => {
+  extraReducers: (builder) => {
+    builder
+    .addCase(fetchCharacters.fulfilled, (state, action) => {
       state.characters = action.payload.map((character) => ({
         id: character.id,
         firstName: character.firstName,
@@ -21,10 +22,10 @@ const charSlice = createSlice({
         image: character.image,
         imageUrl: character.imageUrl,
       }));
-    },
-    [fetchCharacters.rejected]: (state) => {
+    })
+    .addCase(fetchCharacters.rejected, (state) => {
       state.status = 'failed';
-    },
+    })
   },
 });
 
