@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: large;
+  color: lightcoral;
+  padding-right: 10px;
+  background: #131c27;
+}
+
+.footerLink {
+  color: lightgray;
+  padding: 2rem;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .footer p a {
+    font-size: 1rem;
+  }
+
+  .footer p {
+    font-size: 1rem;
+  }
+}
